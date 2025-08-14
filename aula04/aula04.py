@@ -9,4 +9,8 @@ match quant:
         for c in range(quant-2):
             novo = fibonacci[-1] + fibonacci[-2]
             fibonacci.append(novo)
-        print(fibonacci)
+        for num in fibonacci:
+            if num == fibonacci[-1]:
+                print(num)
+                break
+            print(f'{num}, ', end='')
