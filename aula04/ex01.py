@@ -1,0 +1,1 @@
+lista_alturas= ['Caio', 173, 'Helena', 164, 'Vicente', 160]
