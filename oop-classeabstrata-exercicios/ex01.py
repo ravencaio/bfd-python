@@ -1,47 +1,26 @@
 from abc import ABC, abstractmethod
-class Pessoa(ABC):
+class Animal(ABC):
     def __init__(self, nome:str, idade:int):
         self.nome = nome
         self.idade = idade
     
     @abstractmethod
     def falar(self):
-        return f'Olá, sou {self.nome}'
-    
-    @abstractmethod
-    def andar(self, metros:int):
-        return f'{self.nome} andou {metros}M'
-    
-    @abstractmethod
-    def comer(self, comida:str):
-        return f'{self.nome} comeu {comida}'
-
-class Funcionario(Pessoa):
-    def __init__(self, nome, idade, cargo):
+        ...
+class Cachorro(Animal):
+    def __init__(self, nome, idade):
         super().__init__(nome, idade)
-        self.cargo = cargo
-    
     def falar(self):
-        return f'Olá, sou {self.nome}, e meu cargo é {self.cargo}'
-    
-    def andar(self, metros):
-        return super().andar(metros)
+        print('Au au!')
 
-    def comer(self, comida):
-        return super().comer(comida)
-
-class Aluno(Pessoa):
-    def __init__(self, nome, idade, curso:str):
+class Gato(Animal):
+    def __init__(self, nome, idade):
         super().__init__(nome, idade)
-        self.curso = curso
     def falar(self):
-        return f'Olá, sou {self.nome}, e estou cursando {self.curso}'
+        print('Miau..')
     
-    def andar(self, metros):
-        return super().andar(metros)
-    
-    def comer(self, comida):
-        return super().comer(comida)
+c1 = Cachorro('Rex', 4)
+g1 = Gato('Nuvem', 5)
 
-f1 = Funcionario('Fred', 36, 'Professor')
-a1 = Aluno('Caio', 19, 'Eng. Computação')
+c1.falar()
+g1.falar()
