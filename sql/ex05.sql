@@ -1,0 +1,1 @@
+SELECT * FROM CURSO WHERE mensalidade > 600

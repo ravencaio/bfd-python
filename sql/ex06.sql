@@ -1,0 +1,1 @@
+SELECT nome, ano FROM Turma ORDER BY ano 

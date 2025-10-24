@@ -1,0 +1,1 @@
+SELECT nome, data_nascimento FROM Aluno WHERE data_nascimento > '2000-01-01'

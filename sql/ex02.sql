@@ -1,0 +1,1 @@
+SELECT nome, nota1 FROM Aluno
