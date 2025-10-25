@@ -1,1 +1,5 @@
-SELECT nome, ano FROM Turma GROUP BY ano
+SELECT
+    ano,
+    COUNT(ano)
+FROM Turma 
+GROUP BY ano
